@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Admin Dashboard Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fa;
+}
+#top-navbar {
+    width: 100%;
+    background: #222;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    height: 50px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+#top-navbar .navbar-left {
+    display: flex;
+    align-items: center;
+}
+#top-navbar .navbar-user {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#top-navbar .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+#top-navbar .navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#top-navbar .navbar-right a:hover {
+    color: #ffd700;
+}
+#sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background: #23272b;
+    color: #fff;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+    z-index: 1000;
+    padding-top: 10px;
+}
+#sidebar .logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#sidebar .logo img {
+    width: 120px;
+    margin: 10px 0 5px 0;
+}
+#sidebar h2 {
+    text-align: center;
+    color: #ffd700;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar ul li {
+    margin: 0 0 10px 0;
+}
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 6px 0 0 6px;
+    transition: background 0.2s, color 0.2s;
+    gap: 12px;
+}
+#sidebar ul li a:hover, #sidebar ul li a.active {
+    background: #ffd700;
+    color: #23272b;
+}
+.admin-main {
+    margin-left: 240px;
+    padding: 80px 40px 40px 40px;
+}
+.admin-header {
+    margin-bottom: 30px;
+}
+.admin-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #23272b;
+    margin-bottom: 8px;
+}
+.admin-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+.admin-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.admin-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 28px;
+    flex: 1 1 220px;
+    min-width: 220px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+.admin-card i {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 12px;
+}
+.admin-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #23272b;
+}
+.admin-card p {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+}
+.admin-card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+
+@media (max-width: 900px) {
+    .admin-main {
+        margin-left: 0;
+        padding: 80px 10px 10px 10px;
+    }
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+    }
+    .admin-cards {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
